@@ -1,1 +1,2 @@
 # BEAUTY-WEBSITE-NYKAA-CLONE
+Blossom is a responsive and user-friendly website designed as a clone of Nykaa. Developed using HTML, CSS, JavaScript, Bootstrap, and PHP, the website features a comprehensive user experience including user login and signup, a homepage showcasing beauty products, an add-to-cart option, and a streamlined purchasing process. User and product details are securely stored in a database.
