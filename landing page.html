@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        /* Basic Reset */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        /* Container */
+        
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* Header */
+        
+        header {
+            background: #333;
+            color: #ffffff7e;
+            padding: 10px 0;
+        }
+        
+        header .logo {
+            float: left;
+            font-size: 1.5em;
+            margin-left: 20px;
+        }
+        
+        header nav {
+            float: right;
+            margin-right: 20px;
+        }
+        
+        header nav ul {
+            list-style: none;
+        }
+        
+        header nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+        
+        header nav ul li a {
+            color: #ffffff86;
+            text-decoration: none;
+            font-size: 1em;
+        }
+        
+        header::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Hero Section */
+        
+        #hero {
+            background: url('https://unbounce.com/photos/Gradient-Background.png') no-repeat center center/cover;
+            color: #ffffff7a;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        #hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        #hero p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        
+        #hero .btn {
+            padding: 10px 20px;
+            background: #333;
+            color: #ffffff88;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        /* Features Section */
+        
+        #features {
+            background: #f4f4f485;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        #features h2 {
+            margin-bottom: 20px;
+        }
+        
+        .feature {
+            width: 30%;
+            display: inline-block;
+            margin: 20px 1%;
+            background: #ffffff81;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature h3 {
+            margin-bottom: 10px;
+        }
+        
+        .feature p {
+            font-size: 0.9em;
+        }
+        /* Footer */
+        
+        footer {
+            background: #333;
+            color: #ffffff82;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">MyLandingPage</h1>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Welcome to MyLandingPage</h2>
+            <p>Your journey to success starts here.</p>
+            <a href="#features" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <h2>Features</h2>
+            <div class="feature">
+                <h3>Feature One</h3>
+                <p>Detail about feature one.</p>
+            </div>
+            <div class="feature">
+                <h3>Feature Two</h3>
+                <p>Detail about feature two.</p>
+            </div>
+            <div class="feature">
+                <h3>Feature Three</h3>
+                <p>Detail about feature three.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 MyLandingPage. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

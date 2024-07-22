@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            width: fit-content;
+            margin: 200px auto;
+            background-color: #f5f5f5;
+        }
+        
+        .wrapper {
+            width: 400px;
+            /* Increased width to accommodate both buttons */
+            color: black;
+            padding: 20px;
+            margin: 100px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .input-box {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        
+        i {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+        }
+        
+        button {
+            padding: 10px;
+            background-color: rgb(227, 48, 131);
+            color: white;
+            border: none;
+            width: calc(50% - 5px);
+            /* Set width to 50% of container minus spacing */
+            border-radius: 20px;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        button a {
+            color: black;
+            text-decoration: none;
+        }
+        
+        .error-message {
+            color: red;
+            margin-top: 5px;
+            text-align: left;
+        }
+        
+        .button-container {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            /* Spread buttons horizontally */
+        }
+    </style>
+</head>
+
+<body>
+    <div class='wrapper'>
+        <form action="l.php" method="post" onclick="return validateForm()">
+            <h1>Login</h1>
+            <div class='input-box'>
+                <input type='text' id="name" placeholder="Username">
+                <i class='bx bxs-user'></i>
+                <div id="nameError" class="error-message"></div>
+            </div>
+            <div class='input-box'>
+                <input type='password' id="password" placeholder="Password">
+                <i class='bx bxs-lock-alt'></i>
+                <div id="passwordError" class="error-message"></div>
+            </div>
+
+            <div class="button-container">
+                <button type="submit">LOGIN</button>
+                <button><a href="index.html">HOME</a></button>
+            </div>
+            <br>
+            <br>
+
+            <div class="forget">
+                <a href="forget.html">Forget Password?</a>
+            </div>
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var password = document.getElementById('password').value;
+            var nameError = document.getElementById('nameError');
+            var passwordError = document.getElementById('passwordError');
+            nameError.innerText = '';
+            passwordError.innerText = '';
+            if (!name) {
+                nameError.innerText = "Username is required.";
+                return false;
+            }
+            if (!password) {
+                passwordError.innerText = "Password is required.";
+                return false;
+            } else if (password.length < 8) {
+                passwordError.innerText = "Password must be at least 8 characters long.";
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+
+</html>

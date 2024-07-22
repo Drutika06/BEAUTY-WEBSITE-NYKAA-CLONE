@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            position: relative;
+            border: 2px solid white;
+            top: 20px;
+            left: 20px;
+            width: 220px;
+            padding: 20px;
+            margin: 20px;
+            background-color: #f5f5f5;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            /* Added overflow property to contain absolutely positioned button */
+        }
+        
+        .box2 {
+            position: relative;
+            border: 2px solid white;
+            top: 20px;
+            left: 20px;
+            width: 220px;
+            padding: 20px;
+            margin: 20px;
+            background-color: #f5f5f5;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            /* Added overflow property to contain absolutely positioned button */
+        }
+        
+        .box3 {
+            position: relative;
+            border: 2px solid white;
+            top: 20px;
+            left: 20px;
+            width: 220px;
+            padding: 20px;
+            margin: 20px;
+            background-color: #f5f5f5;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            /* Added overflow property to contain absolutely positioned button */
+        }
+        
+        .wishlist-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: red;
+        }
+        
+        .wishlist-button:hover {
+            transform: scale(1.1);
+            /* Optional: Increase size on hover */
+        }
+        
+        .box {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/b/f/bfdfe6cLAKME00000617_f.jpg" alt="">
+            <figure><b>Insight Cosmetics matty eyeliner </b></figure>
+            <figure><b><pre>  liner </pre></b></figure>
+            <p>MRP:₹<s>230</s> ₹180 25% Off</p>
+            <p style="color:rgb(205, 41, 69);position:relative ;left:60px;"> Enjoy Free Gift</p>
+            <p style="position: relative;left:40px;">&#9733 &#9733 &#9733 &#9733 &#9733 (116200)</p>
+            <div class="bag">
+                <button class="wishlist-button" onclick="addToWishlist()">❤️</button>
+            </div>
+        </div>
+        <div class="box2">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/5/2/524c35c19647_H-8901030992797.jpg" alt="">
+            <figure><b>M.A.C Studio Fix Every - Wear All-</b></figure>
+            <figure><b><pre> eyeliner</pre></b></figure>
+            <p>MRP:₹<s>2000</s> ₹1000 50% Off</p>
+            <p style="color:rgb(205, 41, 69);position:relative ;left:60px;"> Enjoy Free Gift</p>
+            <p style="position: relative;left:40px;">&#9733 &#9733 &#9733 &#9733 &#9733 (12647)</p>
+            <div class="bag">
+                <button class="wishlist-button" onclick="addToWishlist()">❤️</button>
+            </div>
+        </div>
+        <div class="box3">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/d/c/dc2d6d3SUGAR00000051N_1.jpg" alt="">
+            <figure><b>e.l.f Cosmetics 16HR Camo eyeliner</b></figure>
+
+            <p>MRP:₹<s>279</s> ₹248 11% Off</p>
+            <p style="color:rgb(205, 41, 69);position:relative ;left:60px;"> Enjoy Free Gift</p>
+            <p style="position: relative;left:40px;">&#9733 &#9733 &#9733 &#9733 &#9733 (12647)</p>
+            <div class="bag">
+                <button class="wishlist-button" onclick="addToWishlist()">❤️</button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script>
+        function addToWishlist() {
+            var productName = 'Nykaa Cosmetics So Creme!'; // Replace with actual product name or get it dynamically
+            var wishlist = localStorage.getItem('wishlist');
+            wishlist = wishlist ? JSON.parse(wishlist) : [];
+            wishlist.push(productName);
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            alert('Item added to wishlist!');
+        }
+    </script>
+</body>
+
+</html>

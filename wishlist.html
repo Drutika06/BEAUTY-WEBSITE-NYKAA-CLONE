@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+</head>
+
+<body>
+    <h1>Wishlist</h1>
+    <ul id="wishlist-items"></ul>
+
+    <script>
+        // Retrieve wishlist items from local storage
+        var wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+        // Display wishlist items
+        var wishlistItemsContainer = document.getElementById('wishlist-items');
+        wishlist.forEach(function(item) {
+            var li = document.createElement('li');
+            li.textContent = item;
+            var removeButton = document.createElement('button');
+            removeButton.textContent = 'Remove';
+            removeButton.onclick = function() {
+                removeItemFromWishlist(item);
+                li.remove();
+            };
+            li.appendChild(removeButton);
+            wishlistItemsContainer.appendChild(li);
+        });
+
+        // Function to remove item from wishlist
+        function removeItemFromWishlist(item) {
+            var index = wishlist.indexOf(item);
+            if (index !== -1) {
+                wishlist.splice(index, 1);
+                localStorage.setItem('wishlist', JSON.stringify(wishlist));
+                alert('Item removed from wishlist!');
+            }
+        }
+    </script>
+</body>
+
+</html>
